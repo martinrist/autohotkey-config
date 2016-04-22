@@ -137,15 +137,15 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 ; Section 1 - Adjustments for individual characters
 ;==================================================
 
-; Make tilde available on GoldTouch Pro
-+`::send, ~
+; Make tilde, backslash and pipe available on GoldTouch Pro
+; Note - these seem to require the 'US' keyboard layout to work correctly
+$#::send, \
+$+#::send, |
+$+`::send, ~
+
 
 ; Win+3 => octothorpe
 #3::send, {#}
-
-; Swap quotes and @
-"::@
-@::"
 
 
 
