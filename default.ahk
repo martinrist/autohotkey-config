@@ -143,6 +143,10 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 ; Win+3 => octothorpe
 #3::send, {#}
 
+; Swap quotes and @
+"::@
+@::"
+
 
 
 ;=================================
@@ -211,6 +215,9 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 !b::send, ^b
 !i::send, ^i
 !u::send, ^u
+
+; Refresh
+!r::send, {F5}
 
 
 
