@@ -139,10 +139,11 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 
 ; Make tilde, backslash and pipe available on GoldTouch Pro
 ; Note - these seem to require the 'US' keyboard layout to work correctly
-$#::send, \
-$+#::send, |
-$+`::send, ~
-
+;$#::send, \
+;$+#::send, |
+;$+`::send, ~
+@::"
+"::@
 
 ; Win+3 => octothorpe
 #3::send, {#}
@@ -219,7 +220,16 @@ $+`::send, ~
 ; Refresh
 !r::send, {F5}
 
-
+; Chrome Tab Switching
+!1::send, ^1
+!2::send, ^2
+!3::send, ^3
+!4::send, ^4
+!5::send, ^5
+!6::send, ^6
+!7::send, ^7
+!8::send, ^8
+!9::send, ^9
 
 ;============================
 ; Section 3 - Text navigation
