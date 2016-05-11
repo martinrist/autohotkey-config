@@ -263,9 +263,9 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 ;==============================
 
 ; Snap active window to left or right of screen
-^#!Left::SnapActiveWindow("top", "left", "full")
-^#!Right::SnapActiveWindow("top", "right", "full")
+^#Left::SnapActiveWindow("top", "left", "full")
+^#Right::SnapActiveWindow("top", "right", "full")
 
 ; Switch monitor of active window
-^#Left::SwapMonOfActiveWindow()
-^#Right::SwapMonOfActiveWindow()
+^#!Left::SwapMonOfActiveWindow()
+^#!Right::SwapMonOfActiveWindow()
