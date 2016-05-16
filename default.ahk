@@ -155,8 +155,8 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 ;=================================
 
 ; Disable Windows keys on their own
-~LWin Up:: return
-~RWin Up:: return
+; ~LWin Up:: return
+; ~RWin Up:: return
 
 ; New Document / File
 !n::send, ^n
@@ -231,6 +231,12 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 !8::send, ^8
 !9::send, ^9
 
+; Back / Forward (Alt+[ / ] map to Alt+Left / Right)
+![::send, !{Left}
+!]::send, !{Right}
+
+
+
 ;============================
 ; Section 3 - Text navigation
 ;============================
@@ -258,6 +264,7 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 !Backspace::send, +{Home}{Del}
 
 
+
 ;==============================
 ; Section 4 - Window Management
 ;==============================
@@ -265,6 +272,9 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 ; Snap active window to left or right of screen
 ^#Left::SnapActiveWindow("top", "left", "full")
 ^#Right::SnapActiveWindow("top", "right", "full")
+
+; Maximise
+^#Up::SnapActiveWindow("", "", "full")
 
 ; Switch monitor of active window
 ^#!Left::SwapMonOfActiveWindow()
