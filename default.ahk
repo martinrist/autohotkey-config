@@ -250,7 +250,7 @@ $+`::send, ~
 +#Left::send, +^{Left}
 +#Right::send, +^{Right}
 
-; Alt+Left/Right => Start / end of line
+; Alt+Left/Right => Start / end of+ line
 !Left::send, {Home}
 !Right::send, {End}
 
@@ -280,3 +280,34 @@ $+`::send, ~
 ; Switch monitor of active window
 ^#!Left::SwapMonOfActiveWindow()
 ^#!Right::SwapMonOfActiveWindow()
+
+
+
+
+;==================================
+; Section 5 - Specific Applications
+;==================================
+
+#IfWinActive ahk_exe Evernote.exe
+
+  ; Shift+Alt+U -> create bulleted list
+  +!u:: send, +^b
+
+  ; Alt+K -> Hyperlink
+  !k:: send, ^k
+
+  ; Shift+Alt+M -> set font to Andale Mono
+  +!m::
+    send, ^d
+    WinWaitActive,Font,,2
+    send Andale Mono{enter}
+    return
+
+  ; Shift+Alt+N -> set font to Arial
+  +!n::
+    send ^d
+    WinWaitActive,Font,,2
+    send Arial{Tab}Regular{enter}
+    return
+
+#IfWinActive
