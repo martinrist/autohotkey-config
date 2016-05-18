@@ -139,11 +139,12 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 
 ; Make tilde, backslash and pipe available on GoldTouch Pro
 ; Note - these seem to require the 'US' keyboard layout to work correctly
-;$#::send, \
-;$+#::send, |
-;$+`::send, ~
+$#::send, \
+$+#::send, |
+$+`::send, ~
 @::"
 "::@
+
 
 ; Win+3 => octothorpe
 #3::send, {#}
@@ -274,7 +275,7 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 ^#Right::SnapActiveWindow("top", "right", "full")
 
 ; Maximise
-^#Up::SnapActiveWindow("", "", "full")
+^#Up::SnapActiveWindow("full", "full", "full")
 
 ; Switch monitor of active window
 ^#!Left::SwapMonOfActiveWindow()
