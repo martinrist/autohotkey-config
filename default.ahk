@@ -236,7 +236,10 @@ $+`::send, ~
 ![::send, !{Left}
 !]::send, !{Right}
 
-
+; Zoom in / out / reset
+!-::send, ^-
+!=::send, ^=
+!0::send, ^0
 
 ;============================
 ; Section 3 - Text navigation
