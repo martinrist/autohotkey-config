@@ -142,8 +142,8 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 $#::send, \
 $+#::send, |
 $+`::send, ~
-@::"
-"::@
+;$@::send, "
+;$"::send, @
 
 
 ; Win+3 => octothorpe
@@ -281,8 +281,12 @@ $+`::send, ~
 ^#Up::SnapActiveWindow("full", "full", "full")
 
 ; Switch monitor of active window
-^#!Left::SwapMonOfActiveWindow()
-^#!Right::SwapMonOfActiveWindow()
+^#!Left::
+^#!Right::
+    SwapMonOfActiveWindow()
+    SnapActiveWindow("full", "full", "full")
+    return
+
 
 
 
