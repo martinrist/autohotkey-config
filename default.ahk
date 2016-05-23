@@ -146,8 +146,8 @@ $+`::send, ~
 ;$"::send, @
 
 
-; Win+3 => octothorpe
-#3::send, {#}
+; Shift+3 => octothorpe
++3::send, {#}
 
 
 
