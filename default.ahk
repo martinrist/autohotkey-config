@@ -133,9 +133,9 @@ SwapMonOfActiveWindow() ; Swaps monitor of active window
 ; ^ - Control
 ; + - Shift
 
-;==================================================
-; Section 1 - Adjustments for individual characters
-;==================================================
+;============================================
+; Section 1 - Adjustments for individual keys
+;============================================
 
 ; Make tilde, backslash and pipe available on GoldTouch Pro
 ; Note - these seem to require the 'US' keyboard layout to work correctly
@@ -149,6 +149,8 @@ $+`::send, ~
 ; Shift+3 => octothorpe
 +3::send, {#}
 
+; Make CapsLock an Escape key
+Capslock::Esc
 
 
 ;=================================
