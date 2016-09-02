@@ -320,3 +320,13 @@ Capslock::Esc
     return
 
 #IfWinActive
+
+#IfWinActive ahk_exe mintty.exe
+
+  ; Alt+C -> Ctrl+Insert (copy)
+  !c:: send, ^{Insert}
+
+  ; Alt+V -> Shift+Insert (paste)
+  !v:: send, +{Insert}
+
+#IfWinActive
