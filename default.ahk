@@ -149,8 +149,9 @@ $"::send, @
 +3::send, {#}
 
 
-; Make CapsLock an Escape key
+; Make CapsLock an Escape key and disable Escape
 Capslock::Esc
+$Esc:: return
 
 ;=================================
 ; Section 2 - Common menu commands
